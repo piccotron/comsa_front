@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
+
+body {
+  margin: 0;
+  font-family: var(--p-family); /* Usa la fuente que define el tema de PrimeNG */
+  background-color: #f8f9fa;   /* Un gris muy claro de fondo suele quedar bien */
+  color: #333;
+}
