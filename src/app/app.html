@@ -236,9 +236,16 @@
       <p>Congratulations! Your app is running. 🎉</p>
       <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
         <h1>Proyecto COMSA</h1>
-        <p-button label="¡PrimeNG Funcionando!" icon="pi pi-check"></p-button>
+        <p-button label="¡PrimeNG Funcionando!" icon="pi pi-check" (onClick)="checkApi()"></p-button>
         <i class="pi pi-check" style="color: green; font-size: 2rem"></i>
         <p-button label="Guardar" icon="pi pi-save"></p-button>
+        @if (respuesta) {
+          <div>
+            <pre>{{ respuesta | json }}</pre>
+          </div>
+        } @else {
+          <p>Esperando datos del backend...</p>
+        }
       </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
